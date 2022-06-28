@@ -1,0 +1,15 @@
+name: Build and Upload Artifacts
+
+on: [push, pull_request]
+
+jobs:
+  CreateArtifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create file
+        run:  echo Hello World > "./artifacts/hello.txt"
+      - uses: actions/upload-artifact@v3
+        with: 
+          name: 'hello.txt'
+          path: './artifacts/hello.txt'
+      
