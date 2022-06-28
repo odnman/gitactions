@@ -6,6 +6,8 @@ jobs:
   CreateArtifact:
     runs-on: ubuntu-latest
     steps:
+      - name: Create artifacts Directory
+        run:  mkdir artifacts
       - name: Create file
         run:  echo Hello World > "./artifacts/hello.txt"
       - uses: actions/upload-artifact@v3
