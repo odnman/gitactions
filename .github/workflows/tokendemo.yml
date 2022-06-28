@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   FailJobIssueDemo:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Step is going to pass
         run:  echo Passing step
